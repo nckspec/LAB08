@@ -21,7 +21,7 @@ using namespace std;
  *
  ******************************************************************************/
 
-
+bool IsPrime(int number);
 
 int main()
 {
@@ -48,6 +48,19 @@ int main()
     if(ex == 2)
     {
 
+        int number_one;
+        int number_two;
+
+        cout << "Please input two positive numbers: ";
+        cin >> number_one >> number_two;
+
+        for( ; number_one < number_two; number_one++)
+        {
+            if(IsPrime(number_one))
+                cout << number_one << endl;
+
+        }
+
 
     }
 
@@ -57,4 +70,21 @@ int main()
 }
 
 
+bool IsPrime(int number)
+{
 
+    int x;
+
+    for(x = 2; x < number; x++)
+    {
+
+        if(number % x == 0)
+            return false;
+
+    }
+
+    return true;
+
+
+
+}
